@@ -13,8 +13,31 @@
           "function": {
             "contract_fn": {
               "contract_address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD2KM",
-              "function_name": "check_admin",
-              "args": []
+              "function_name": "register_patient",
+              "args": [
+                {
+                  "string": "Rafe Aaron"
+                },
+                {
+                  "u64": 20304005
+                },
+                {
+                  "string": "O+"
+                },
+                {
+                  "vec": [
+                    {
+                      "string": "Cancer"
+                    },
+                    {
+                      "string": "Waking up"
+                    }
+                  ]
+                },
+                {
+                  "string": "65ydg97r5"
+                }
+              ]
             }
           },
           "sub_invocations": []
@@ -83,12 +106,106 @@
                         "key": {
                           "vec": [
                             {
+                              "symbol": "Patient"
+                            },
+                            {
+                              "u64": 1
+                            }
+                          ]
+                        },
+                        "val": {
+                          "map": [
+                            {
+                              "key": {
+                                "symbol": "active"
+                              },
+                              "val": {
+                                "bool": true
+                              }
+                            },
+                            {
+                              "key": {
+                                "symbol": "allergies"
+                              },
+                              "val": {
+                                "vec": [
+                                  {
+                                    "string": "Cancer"
+                                  },
+                                  {
+                                    "string": "Waking up"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "key": {
+                                "symbol": "blood_type"
+                              },
+                              "val": {
+                                "string": "O+"
+                              }
+                            },
+                            {
+                              "key": {
+                                "symbol": "date_of_birth"
+                              },
+                              "val": {
+                                "u64": 20304005
+                              }
+                            },
+                            {
+                              "key": {
+                                "symbol": "id"
+                              },
+                              "val": {
+                                "u64": 1
+                              }
+                            },
+                            {
+                              "key": {
+                                "symbol": "insurance_id"
+                              },
+                              "val": {
+                                "string": "65ydg97r5"
+                              }
+                            },
+                            {
+                              "key": {
+                                "symbol": "name"
+                              },
+                              "val": {
+                                "string": "Rafe Aaron"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "key": {
+                          "vec": [
+                            {
                               "symbol": "PatientCount"
                             }
                           ]
                         },
                         "val": {
-                          "u64": 0
+                          "u64": 1
+                        }
+                      },
+                      {
+                        "key": {
+                          "vec": [
+                            {
+                              "symbol": "PatientTests"
+                            },
+                            {
+                              "u64": 1
+                            }
+                          ]
+                        },
+                        "val": {
+                          "vec": []
                         }
                       },
                       {
