@@ -1,21 +1,24 @@
-// #![cfg(test)]
+#![cfg(test)]
+use crate::{HospitalContract, HospitalContractClient};
+use soroban_sdk::{Env};
 
-// use super::*;
-// use soroban_sdk::{vec, Env, String};
+#[test]
+fn test() {
+    let env = Env::default();
+    let contract_id = env.register(HospitalContract, ());
+    let client = HospitalContractClient::new(&env, &contract_id);
 
-// #[test]
-// fn test() {
-//     let env = Env::default();
-//     let contract_id = env.register(Contract, ());
-//     let client = ContractClient::new(&env, &contract_id);
+    client.initialize( &contract_id);
+}
 
-//     let words = client.hello(&String::from_str(&env, "Dev"));
-//     assert_eq!(
-//         words,
-//         vec![
-//             &env,
-//             String::from_str(&env, "Hello"),
-//             String::from_str(&env, "Dev"),
-//         ]
-//     );
-// }
+#[test]
+fn check_if_admin()
+{
+
+    let env = Env::default();
+    let contract_id = env.register(HospitalContract, ());
+    let client = HospitalContractClient::new(&env, &contract_id);
+
+    assert_eq!(contract_id, client.initialize(&contract_id));
+    
+}

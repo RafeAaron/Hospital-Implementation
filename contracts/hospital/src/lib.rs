@@ -1,7 +1,7 @@
 #![no_std]
 use core::panic;
 
-use soroban_sdk::{contract, contractimpl, contracttype, Address, Env, String, Vec};
+use soroban_sdk::{contract, contractimpl, contracttype, log, Address, Env, String, Vec};
 
 
 // Hospital contract Outline 
@@ -108,8 +108,9 @@ impl HospitalContract {
     admin
    }
 
-   fn check_admin (env: &Env) {
+   pub fn check_admin (env: &Env) {
     let admin: Address = env.storage().instance().get(&DataKey::Admin).unwrap();
+    log!(&env, "Hello Everyone");
     admin.require_auth();
    }
 
@@ -359,8 +360,6 @@ impl HospitalContract {
 
     }
 
-    /*
-
     pub fn update_medical_test(
         env: Env,
         id: u64,
@@ -441,7 +440,7 @@ impl HospitalContract {
 
         medical_tests
 
-    }*/
+    }
 
 }
 
