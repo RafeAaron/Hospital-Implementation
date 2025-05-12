@@ -3,6 +3,16 @@
 use crate::{HospitalContract, HospitalContractClient};
 use soroban_sdk::{Env, String, Vec};
 
+/*Tests written
+    initial_test
+    check_if_admin
+    add_patient
+    update_patient_details
+    get_patient_details
+    set_patient_active
+    list_all_patients
+*/
+
 #[test]
 fn test() {
     let env = Env::default();
